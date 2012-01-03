@@ -1,0 +1,7 @@
+#!/bin/bash
+# bmuc(bash me up convert) v1.0
+# Converts all files in working directory from DOS to Unix formatting
+
+for i in $( ls ); do
+    awk '{ sub("\r$", ""); print }' $i > $i; 
+done

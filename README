@@ -1,2 +1,10 @@
-bmu(bash me up) v0.1 includes:
-- backup script to compress current directory's files and email
+bmu(bash me up) v0.2 includes:
+- bmub: backup script to compress current directory's files and email
+- bmuc: conversion script to convert DOS files to Unix
+
+Note to users: 
+You may need to convert each file to the proper formatting. You can run bmuc,
+but since this is a chicken and egg sort of problem, here is the script on a
+single line to run: 
+
+for i in $(ls); do awk '{ sub("\r$", ""); print }' $i > $i; done
