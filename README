@@ -1,5 +1,6 @@
-bmu(bash me up) v0.2 includes:
-- bmub: backup script to compress current directory's files and email
+bmu(bash me up) v0.3 includes:
+- bmubc: backup script that copies files to folder owner's home directories
+- bmube: backup script to compress current directory's files and email
 - bmuc: conversion script to convert DOS files to Unix
 
 Note to users: 
