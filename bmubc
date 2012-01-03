@@ -1,0 +1,8 @@
+#!/bin/bash
+# bmubc(bash me up backup copy) v1.0
+# First copies working directory into remote working directories for all
+# folder owners. Then compresses all files in working directory and
+# puts a copy into all folder owner's home directories
+
+$FOLDER_NAME=${PWD##*/}
+$REMOTE=backup/$FOLDER_NAME/

@@ -1,0 +1,12 @@
+#!/bin/bash
+# bmube(bash me up backup [via] email) v1.0
+# Compresses all files in current working directory and mails to email below
+
+EMAIL=you@mail.com #CHANGE TO YOUR EMAIL
+FOLDER=${PWD##*/}
+DATE=$(date +%D%%%T)
+FILENAME=$FOLDER-$(date +%s).tgz #format: FolderName_SecsFromEpoch
+
+tar -zcf $FILENAME . 
+echo | mutt -a $FILENAME -s "Backup of $FOLDER on ${DATE//%/ at }" $EMAIL
+rm $FILENAME  
