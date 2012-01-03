@@ -1,0 +1,3 @@
+#!/bin/bash
+tar -zcf FOLDER_TIMESTAMP.tar.gz . 
+echo | mutt -a FOLDER_TIMESTAMP.tar.gz -s "Backup of secret files" user@host.com
